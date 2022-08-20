@@ -3,26 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Let Me Read You</title>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="./style.css">
+  <script src="controls.js"></script>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body{background:rgb(63,94,251);
     background:radial-gradient(circle,rgba(63,94,251,1) 0%, rgba(246,97,190,1) 100%);}
+
+    #wrapper {
+          width: 60%;
+          margin: 0 auto;
+          text-align: center;}
+
+
   </style>
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<H1> ... </H1>
-<audio controls autoplay preload="auto" style="margin-left:500px;">
-  <source src="https://pwdown.com/113639/Kesariya - Brahmastra.mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/8146/03 Tera Rastaa Chhodoon Na - Chennai Express.mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/7867/03 Chahun Main Ya Naa (Aashiqui 2).mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/7606/02 Mann Mera (Table No 21).mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/8047/Tum Tak.mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/8919/05 Hamdard - Ek Villain ( PagalWorld.com ).mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/8783/03 Mast Magan - 2 States [Arijit Singh].mp3" type="audio/mpeg">
-  <source src="https://pwdown.com/113604/Chaand Baaliyan - Aditya A.mp3" type="audio/mpeg">
-</audio>
+<div class="audio-player">
+    <audio autoplay loop">
+      <source src="https://pwdown.com/113639/Kesariya - Brahmastra.mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/8146/03 Tera Rastaa Chhodoon Na - Chennai Express.mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/7867/03 Chahun Main Ya Naa (Aashiqui 2).mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/7606/02 Mann Mera (Table No 21).mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/8047/Tum Tak.mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/8919/05 Hamdard - Ek Villain ( PagalWorld.com ).mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/8783/03 Mast Magan - 2 States [Arijit Singh].mp3" type="audio/mpeg">
+      <source src="https://pwdown.com/113604/Chaand Baaliyan - Aditya A.mp3" type="audio/mpeg">
+    </audio>
+    <button class="play controls button"></button>
+    <button class="previous controls button"></button>
+    <button class="next controls button"></button>
+    <progress class="progress custom-progress" value="0" max="1"></progress>
+    <progress class="volume custom-progress" value="0.5" max="1"></progress>
+</div>
 <div class="cards">
   
   <div class="card">
